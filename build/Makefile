@@ -48,10 +48,10 @@ RM = /opt/cmake-3.14.0-rc2-Linux-x86_64/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lk18493/SLAM_work/semantic_icpSLAM
+CMAKE_SOURCE_DIR = /home/lk18493/SLAM_work/libfusion
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lk18493/SLAM_work/semantic_icpSLAM/build
+CMAKE_BINARY_DIR = /home/lk18493/SLAM_work/libfusion/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/semantic_icpSLAM/build/CMakeFiles /home/lk18493/SLAM_work/semantic_icpSLAM/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/libfusion/build/CMakeFiles /home/lk18493/SLAM_work/libfusion/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/semantic_icpSLAM/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/libfusion/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,556 +111,730 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_output_cam
+# Target rules for targets named phong.vert
 
 # Build rule for target.
-test_output_cam: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_output_cam
-.PHONY : test_output_cam
+phong.vert: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 phong.vert
+.PHONY : phong.vert
 
 # fast build rule for target.
-test_output_cam/fast:
-	$(MAKE) -f CMakeFiles/test_output_cam.dir/build.make CMakeFiles/test_output_cam.dir/build
-.PHONY : test_output_cam/fast
+phong.vert/fast:
+	$(MAKE) -f CMakeFiles/phong.vert.dir/build.make CMakeFiles/phong.vert.dir/build
+.PHONY : phong.vert/fast
 
 #=============================================================================
-# Target rules for targets named semantic_icp_slam
+# Target rules for targets named direct_output.frag
 
 # Build rule for target.
-semantic_icp_slam: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 semantic_icp_slam
-.PHONY : semantic_icp_slam
+direct_output.frag: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 direct_output.frag
+.PHONY : direct_output.frag
 
 # fast build rule for target.
-semantic_icp_slam/fast:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/build
-.PHONY : semantic_icp_slam/fast
+direct_output.frag/fast:
+	$(MAKE) -f CMakeFiles/direct_output.frag.dir/build.make CMakeFiles/direct_output.frag.dir/build
+.PHONY : direct_output.frag/fast
 
 #=============================================================================
-# Target rules for targets named test_output_tum
+# Target rules for targets named fusion
 
 # Build rule for target.
-test_output_tum: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_output_tum
-.PHONY : test_output_tum
+fusion: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fusion
+.PHONY : fusion
 
 # fast build rule for target.
-test_output_tum/fast:
-	$(MAKE) -f CMakeFiles/test_output_tum.dir/build.make CMakeFiles/test_output_tum.dir/build
-.PHONY : test_output_tum/fast
+fusion/fast:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/build
+.PHONY : fusion/fast
 
-Core/Camera.o: Core/Camera.cc.o
+#=============================================================================
+# Target rules for targets named colour.vert
 
-.PHONY : Core/Camera.o
+# Build rule for target.
+colour.vert: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 colour.vert
+.PHONY : colour.vert
 
-# target to build an object file
-Core/Camera.cc.o:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Core/Camera.cc.o
-.PHONY : Core/Camera.cc.o
+# fast build rule for target.
+colour.vert/fast:
+	$(MAKE) -f CMakeFiles/colour.vert.dir/build.make CMakeFiles/colour.vert.dir/build
+.PHONY : colour.vert/fast
 
-Core/Camera.i: Core/Camera.cc.i
+#=============================================================================
+# Target rules for targets named openni
 
-.PHONY : Core/Camera.i
+# Build rule for target.
+openni: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 openni
+.PHONY : openni
 
-# target to preprocess a source file
-Core/Camera.cc.i:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Core/Camera.cc.i
-.PHONY : Core/Camera.cc.i
+# fast build rule for target.
+openni/fast:
+	$(MAKE) -f example/open_ni/CMakeFiles/openni.dir/build.make example/open_ni/CMakeFiles/openni.dir/build
+.PHONY : openni/fast
 
-Core/Camera.s: Core/Camera.cc.s
+#=============================================================================
+# Target rules for targets named tum
 
-.PHONY : Core/Camera.s
+# Build rule for target.
+tum: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tum
+.PHONY : tum
 
-# target to generate assembly for a file
-Core/Camera.cc.s:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Core/Camera.cc.s
-.PHONY : Core/Camera.cc.s
+# fast build rule for target.
+tum/fast:
+	$(MAKE) -f example/tum/CMakeFiles/tum.dir/build.make example/tum/CMakeFiles/tum.dir/build
+.PHONY : tum/fast
 
-Core/Frame.o: Core/Frame.cc.o
+src/data_struct/map_struct.o: src/data_struct/map_struct.cu.o
 
-.PHONY : Core/Frame.o
-
-# target to build an object file
-Core/Frame.cc.o:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Core/Frame.cc.o
-.PHONY : Core/Frame.cc.o
-
-Core/Frame.i: Core/Frame.cc.i
-
-.PHONY : Core/Frame.i
-
-# target to preprocess a source file
-Core/Frame.cc.i:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Core/Frame.cc.i
-.PHONY : Core/Frame.cc.i
-
-Core/Frame.s: Core/Frame.cc.s
-
-.PHONY : Core/Frame.s
-
-# target to generate assembly for a file
-Core/Frame.cc.s:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Core/Frame.cc.s
-.PHONY : Core/Frame.cc.s
-
-Core/KeyFrame.o: Core/KeyFrame.cc.o
-
-.PHONY : Core/KeyFrame.o
+.PHONY : src/data_struct/map_struct.o
 
 # target to build an object file
-Core/KeyFrame.cc.o:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Core/KeyFrame.cc.o
-.PHONY : Core/KeyFrame.cc.o
+src/data_struct/map_struct.cu.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/data_struct/map_struct.cu.o
+.PHONY : src/data_struct/map_struct.cu.o
 
-Core/KeyFrame.i: Core/KeyFrame.cc.i
+src/data_struct/map_struct.i: src/data_struct/map_struct.cu.i
 
-.PHONY : Core/KeyFrame.i
+.PHONY : src/data_struct/map_struct.i
 
 # target to preprocess a source file
-Core/KeyFrame.cc.i:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Core/KeyFrame.cc.i
-.PHONY : Core/KeyFrame.cc.i
+src/data_struct/map_struct.cu.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/data_struct/map_struct.cu.i
+.PHONY : src/data_struct/map_struct.cu.i
 
-Core/KeyFrame.s: Core/KeyFrame.cc.s
+src/data_struct/map_struct.s: src/data_struct/map_struct.cu.s
 
-.PHONY : Core/KeyFrame.s
+.PHONY : src/data_struct/map_struct.s
 
 # target to generate assembly for a file
-Core/KeyFrame.cc.s:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Core/KeyFrame.cc.s
-.PHONY : Core/KeyFrame.cc.s
+src/data_struct/map_struct.cu.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/data_struct/map_struct.cu.s
+.PHONY : src/data_struct/map_struct.cu.s
 
-Core/System.o: Core/System.cc.o
+src/data_struct/rgbd_frame.o: src/data_struct/rgbd_frame.cpp.o
 
-.PHONY : Core/System.o
+.PHONY : src/data_struct/rgbd_frame.o
 
 # target to build an object file
-Core/System.cc.o:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Core/System.cc.o
-.PHONY : Core/System.cc.o
+src/data_struct/rgbd_frame.cpp.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/data_struct/rgbd_frame.cpp.o
+.PHONY : src/data_struct/rgbd_frame.cpp.o
 
-Core/System.i: Core/System.cc.i
+src/data_struct/rgbd_frame.i: src/data_struct/rgbd_frame.cpp.i
 
-.PHONY : Core/System.i
+.PHONY : src/data_struct/rgbd_frame.i
 
 # target to preprocess a source file
-Core/System.cc.i:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Core/System.cc.i
-.PHONY : Core/System.cc.i
+src/data_struct/rgbd_frame.cpp.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/data_struct/rgbd_frame.cpp.i
+.PHONY : src/data_struct/rgbd_frame.cpp.i
 
-Core/System.s: Core/System.cc.s
+src/data_struct/rgbd_frame.s: src/data_struct/rgbd_frame.cpp.s
 
-.PHONY : Core/System.s
+.PHONY : src/data_struct/rgbd_frame.s
 
 # target to generate assembly for a file
-Core/System.cc.s:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Core/System.cc.s
-.PHONY : Core/System.cc.s
+src/data_struct/rgbd_frame.cpp.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/data_struct/rgbd_frame.cpp.s
+.PHONY : src/data_struct/rgbd_frame.cpp.s
 
-Detecting/MaskRCNN.o: Detecting/MaskRCNN.cpp.o
+src/detection/MaskRCNN.o: src/detection/MaskRCNN.cpp.o
 
-.PHONY : Detecting/MaskRCNN.o
+.PHONY : src/detection/MaskRCNN.o
 
 # target to build an object file
-Detecting/MaskRCNN.cpp.o:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Detecting/MaskRCNN.cpp.o
-.PHONY : Detecting/MaskRCNN.cpp.o
+src/detection/MaskRCNN.cpp.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/detection/MaskRCNN.cpp.o
+.PHONY : src/detection/MaskRCNN.cpp.o
 
-Detecting/MaskRCNN.i: Detecting/MaskRCNN.cpp.i
+src/detection/MaskRCNN.i: src/detection/MaskRCNN.cpp.i
 
-.PHONY : Detecting/MaskRCNN.i
+.PHONY : src/detection/MaskRCNN.i
 
 # target to preprocess a source file
-Detecting/MaskRCNN.cpp.i:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Detecting/MaskRCNN.cpp.i
-.PHONY : Detecting/MaskRCNN.cpp.i
+src/detection/MaskRCNN.cpp.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/detection/MaskRCNN.cpp.i
+.PHONY : src/detection/MaskRCNN.cpp.i
 
-Detecting/MaskRCNN.s: Detecting/MaskRCNN.cpp.s
+src/detection/MaskRCNN.s: src/detection/MaskRCNN.cpp.s
 
-.PHONY : Detecting/MaskRCNN.s
+.PHONY : src/detection/MaskRCNN.s
 
 # target to generate assembly for a file
-Detecting/MaskRCNN.cpp.s:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Detecting/MaskRCNN.cpp.s
-.PHONY : Detecting/MaskRCNN.cpp.s
+src/detection/MaskRCNN.cpp.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/detection/MaskRCNN.cpp.s
+.PHONY : src/detection/MaskRCNN.cpp.s
 
-GUI/Viewer.o: GUI/Viewer.cc.o
+src/features/extractor.o: src/features/extractor.cpp.o
 
-.PHONY : GUI/Viewer.o
+.PHONY : src/features/extractor.o
 
 # target to build an object file
-GUI/Viewer.cc.o:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/GUI/Viewer.cc.o
-.PHONY : GUI/Viewer.cc.o
+src/features/extractor.cpp.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/features/extractor.cpp.o
+.PHONY : src/features/extractor.cpp.o
 
-GUI/Viewer.i: GUI/Viewer.cc.i
+src/features/extractor.i: src/features/extractor.cpp.i
 
-.PHONY : GUI/Viewer.i
+.PHONY : src/features/extractor.i
 
 # target to preprocess a source file
-GUI/Viewer.cc.i:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/GUI/Viewer.cc.i
-.PHONY : GUI/Viewer.cc.i
+src/features/extractor.cpp.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/features/extractor.cpp.i
+.PHONY : src/features/extractor.cpp.i
 
-GUI/Viewer.s: GUI/Viewer.cc.s
+src/features/extractor.s: src/features/extractor.cpp.s
 
-.PHONY : GUI/Viewer.s
+.PHONY : src/features/extractor.s
 
 # target to generate assembly for a file
-GUI/Viewer.cc.s:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/GUI/Viewer.cc.s
-.PHONY : GUI/Viewer.cc.s
+src/features/extractor.cpp.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/features/extractor.cpp.s
+.PHONY : src/features/extractor.cpp.s
 
-Main.o: Main.cc.o
+src/features/matcher.o: src/features/matcher.cpp.o
 
-.PHONY : Main.o
+.PHONY : src/features/matcher.o
 
 # target to build an object file
-Main.cc.o:
-	$(MAKE) -f CMakeFiles/test_output_cam.dir/build.make CMakeFiles/test_output_cam.dir/Main.cc.o
-.PHONY : Main.cc.o
+src/features/matcher.cpp.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/features/matcher.cpp.o
+.PHONY : src/features/matcher.cpp.o
 
-Main.i: Main.cc.i
+src/features/matcher.i: src/features/matcher.cpp.i
 
-.PHONY : Main.i
+.PHONY : src/features/matcher.i
 
 # target to preprocess a source file
-Main.cc.i:
-	$(MAKE) -f CMakeFiles/test_output_cam.dir/build.make CMakeFiles/test_output_cam.dir/Main.cc.i
-.PHONY : Main.cc.i
+src/features/matcher.cpp.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/features/matcher.cpp.i
+.PHONY : src/features/matcher.cpp.i
 
-Main.s: Main.cc.s
+src/features/matcher.s: src/features/matcher.cpp.s
 
-.PHONY : Main.s
+.PHONY : src/features/matcher.s
 
 # target to generate assembly for a file
-Main.cc.s:
-	$(MAKE) -f CMakeFiles/test_output_cam.dir/build.make CMakeFiles/test_output_cam.dir/Main.cc.s
-.PHONY : Main.cc.s
+src/features/matcher.cpp.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/features/matcher.cpp.s
+.PHONY : src/features/matcher.cpp.s
 
-MainTum.o: MainTum.cc.o
+src/input/oni_camera.o: src/input/oni_camera.cpp.o
 
-.PHONY : MainTum.o
+.PHONY : src/input/oni_camera.o
 
 # target to build an object file
-MainTum.cc.o:
-	$(MAKE) -f CMakeFiles/test_output_tum.dir/build.make CMakeFiles/test_output_tum.dir/MainTum.cc.o
-.PHONY : MainTum.cc.o
+src/input/oni_camera.cpp.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/input/oni_camera.cpp.o
+.PHONY : src/input/oni_camera.cpp.o
 
-MainTum.i: MainTum.cc.i
+src/input/oni_camera.i: src/input/oni_camera.cpp.i
 
-.PHONY : MainTum.i
+.PHONY : src/input/oni_camera.i
 
 # target to preprocess a source file
-MainTum.cc.i:
-	$(MAKE) -f CMakeFiles/test_output_tum.dir/build.make CMakeFiles/test_output_tum.dir/MainTum.cc.i
-.PHONY : MainTum.cc.i
+src/input/oni_camera.cpp.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/input/oni_camera.cpp.i
+.PHONY : src/input/oni_camera.cpp.i
 
-MainTum.s: MainTum.cc.s
+src/input/oni_camera.s: src/input/oni_camera.cpp.s
 
-.PHONY : MainTum.s
+.PHONY : src/input/oni_camera.s
 
 # target to generate assembly for a file
-MainTum.cc.s:
-	$(MAKE) -f CMakeFiles/test_output_tum.dir/build.make CMakeFiles/test_output_tum.dir/MainTum.cc.s
-.PHONY : MainTum.cc.s
+src/input/oni_camera.cpp.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/input/oni_camera.cpp.s
+.PHONY : src/input/oni_camera.cpp.s
 
-Mapping/DeviceMap.o: Mapping/DeviceMap.cu.o
+src/input/tum_loader.o: src/input/tum_loader.cpp.o
 
-.PHONY : Mapping/DeviceMap.o
+.PHONY : src/input/tum_loader.o
 
 # target to build an object file
-Mapping/DeviceMap.cu.o:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Mapping/DeviceMap.cu.o
-.PHONY : Mapping/DeviceMap.cu.o
+src/input/tum_loader.cpp.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/input/tum_loader.cpp.o
+.PHONY : src/input/tum_loader.cpp.o
 
-Mapping/DeviceMap.i: Mapping/DeviceMap.cu.i
+src/input/tum_loader.i: src/input/tum_loader.cpp.i
 
-.PHONY : Mapping/DeviceMap.i
+.PHONY : src/input/tum_loader.i
 
 # target to preprocess a source file
-Mapping/DeviceMap.cu.i:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Mapping/DeviceMap.cu.i
-.PHONY : Mapping/DeviceMap.cu.i
+src/input/tum_loader.cpp.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/input/tum_loader.cpp.i
+.PHONY : src/input/tum_loader.cpp.i
 
-Mapping/DeviceMap.s: Mapping/DeviceMap.cu.s
+src/input/tum_loader.s: src/input/tum_loader.cpp.s
 
-.PHONY : Mapping/DeviceMap.s
+.PHONY : src/input/tum_loader.s
 
 # target to generate assembly for a file
-Mapping/DeviceMap.cu.s:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Mapping/DeviceMap.cu.s
-.PHONY : Mapping/DeviceMap.cu.s
+src/input/tum_loader.cpp.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/input/tum_loader.cpp.s
+.PHONY : src/input/tum_loader.cpp.s
 
-Mapping/FuseMap.o: Mapping/FuseMap.cu.o
+src/keyframe_graph/keyframe_graph.o: src/keyframe_graph/keyframe_graph.cpp.o
 
-.PHONY : Mapping/FuseMap.o
+.PHONY : src/keyframe_graph/keyframe_graph.o
 
 # target to build an object file
-Mapping/FuseMap.cu.o:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Mapping/FuseMap.cu.o
-.PHONY : Mapping/FuseMap.cu.o
+src/keyframe_graph/keyframe_graph.cpp.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/keyframe_graph/keyframe_graph.cpp.o
+.PHONY : src/keyframe_graph/keyframe_graph.cpp.o
 
-Mapping/FuseMap.i: Mapping/FuseMap.cu.i
+src/keyframe_graph/keyframe_graph.i: src/keyframe_graph/keyframe_graph.cpp.i
 
-.PHONY : Mapping/FuseMap.i
+.PHONY : src/keyframe_graph/keyframe_graph.i
 
 # target to preprocess a source file
-Mapping/FuseMap.cu.i:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Mapping/FuseMap.cu.i
-.PHONY : Mapping/FuseMap.cu.i
+src/keyframe_graph/keyframe_graph.cpp.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/keyframe_graph/keyframe_graph.cpp.i
+.PHONY : src/keyframe_graph/keyframe_graph.cpp.i
 
-Mapping/FuseMap.s: Mapping/FuseMap.cu.s
+src/keyframe_graph/keyframe_graph.s: src/keyframe_graph/keyframe_graph.cpp.s
 
-.PHONY : Mapping/FuseMap.s
+.PHONY : src/keyframe_graph/keyframe_graph.s
 
 # target to generate assembly for a file
-Mapping/FuseMap.cu.s:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Mapping/FuseMap.cu.s
-.PHONY : Mapping/FuseMap.cu.s
+src/keyframe_graph/keyframe_graph.cpp.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/keyframe_graph/keyframe_graph.cpp.s
+.PHONY : src/keyframe_graph/keyframe_graph.cpp.s
 
-Mapping/Mapping.o: Mapping/Mapping.cc.o
+src/map_manager.o: src/map_manager.cpp.o
 
-.PHONY : Mapping/Mapping.o
+.PHONY : src/map_manager.o
 
 # target to build an object file
-Mapping/Mapping.cc.o:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Mapping/Mapping.cc.o
-.PHONY : Mapping/Mapping.cc.o
+src/map_manager.cpp.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/map_manager.cpp.o
+.PHONY : src/map_manager.cpp.o
 
-Mapping/Mapping.i: Mapping/Mapping.cc.i
+src/map_manager.i: src/map_manager.cpp.i
 
-.PHONY : Mapping/Mapping.i
+.PHONY : src/map_manager.i
 
 # target to preprocess a source file
-Mapping/Mapping.cc.i:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Mapping/Mapping.cc.i
-.PHONY : Mapping/Mapping.cc.i
+src/map_manager.cpp.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/map_manager.cpp.i
+.PHONY : src/map_manager.cpp.i
 
-Mapping/Mapping.s: Mapping/Mapping.cc.s
+src/map_manager.s: src/map_manager.cpp.s
 
-.PHONY : Mapping/Mapping.s
+.PHONY : src/map_manager.s
 
 # target to generate assembly for a file
-Mapping/Mapping.cc.s:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Mapping/Mapping.cc.s
-.PHONY : Mapping/Mapping.cc.s
+src/map_manager.cpp.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/map_manager.cpp.s
+.PHONY : src/map_manager.cpp.s
 
-Mapping/MeshScene.o: Mapping/MeshScene.cu.o
+src/relocalization/ransac_ao.o: src/relocalization/ransac_ao.cpp.o
 
-.PHONY : Mapping/MeshScene.o
+.PHONY : src/relocalization/ransac_ao.o
 
 # target to build an object file
-Mapping/MeshScene.cu.o:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Mapping/MeshScene.cu.o
-.PHONY : Mapping/MeshScene.cu.o
+src/relocalization/ransac_ao.cpp.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/relocalization/ransac_ao.cpp.o
+.PHONY : src/relocalization/ransac_ao.cpp.o
 
-Mapping/MeshScene.i: Mapping/MeshScene.cu.i
+src/relocalization/ransac_ao.i: src/relocalization/ransac_ao.cpp.i
 
-.PHONY : Mapping/MeshScene.i
+.PHONY : src/relocalization/ransac_ao.i
 
 # target to preprocess a source file
-Mapping/MeshScene.cu.i:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Mapping/MeshScene.cu.i
-.PHONY : Mapping/MeshScene.cu.i
+src/relocalization/ransac_ao.cpp.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/relocalization/ransac_ao.cpp.i
+.PHONY : src/relocalization/ransac_ao.cpp.i
 
-Mapping/MeshScene.s: Mapping/MeshScene.cu.s
+src/relocalization/ransac_ao.s: src/relocalization/ransac_ao.cpp.s
 
-.PHONY : Mapping/MeshScene.s
+.PHONY : src/relocalization/ransac_ao.s
 
 # target to generate assembly for a file
-Mapping/MeshScene.cu.s:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Mapping/MeshScene.cu.s
-.PHONY : Mapping/MeshScene.cu.s
+src/relocalization/ransac_ao.cpp.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/relocalization/ransac_ao.cpp.s
+.PHONY : src/relocalization/ransac_ao.cpp.s
 
-Mapping/RenderScene.o: Mapping/RenderScene.cu.o
+src/relocalization/relocalizer.o: src/relocalization/relocalizer.cpp.o
 
-.PHONY : Mapping/RenderScene.o
+.PHONY : src/relocalization/relocalizer.o
 
 # target to build an object file
-Mapping/RenderScene.cu.o:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Mapping/RenderScene.cu.o
-.PHONY : Mapping/RenderScene.cu.o
+src/relocalization/relocalizer.cpp.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/relocalization/relocalizer.cpp.o
+.PHONY : src/relocalization/relocalizer.cpp.o
 
-Mapping/RenderScene.i: Mapping/RenderScene.cu.i
+src/relocalization/relocalizer.i: src/relocalization/relocalizer.cpp.i
 
-.PHONY : Mapping/RenderScene.i
+.PHONY : src/relocalization/relocalizer.i
 
 # target to preprocess a source file
-Mapping/RenderScene.cu.i:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Mapping/RenderScene.cu.i
-.PHONY : Mapping/RenderScene.cu.i
+src/relocalization/relocalizer.cpp.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/relocalization/relocalizer.cpp.i
+.PHONY : src/relocalization/relocalizer.cpp.i
 
-Mapping/RenderScene.s: Mapping/RenderScene.cu.s
+src/relocalization/relocalizer.s: src/relocalization/relocalizer.cpp.s
 
-.PHONY : Mapping/RenderScene.s
+.PHONY : src/relocalization/relocalizer.s
 
 # target to generate assembly for a file
-Mapping/RenderScene.cu.s:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Mapping/RenderScene.cu.s
-.PHONY : Mapping/RenderScene.cu.s
+src/relocalization/relocalizer.cpp.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/relocalization/relocalizer.cpp.s
+.PHONY : src/relocalization/relocalizer.cpp.s
 
-Optimization/Optimizer.o: Optimization/Optimizer.cc.o
+src/system.o: src/system.cpp.o
 
-.PHONY : Optimization/Optimizer.o
+.PHONY : src/system.o
 
 # target to build an object file
-Optimization/Optimizer.cc.o:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Optimization/Optimizer.cc.o
-.PHONY : Optimization/Optimizer.cc.o
+src/system.cpp.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/system.cpp.o
+.PHONY : src/system.cpp.o
 
-Optimization/Optimizer.i: Optimization/Optimizer.cc.i
+src/system.i: src/system.cpp.i
 
-.PHONY : Optimization/Optimizer.i
+.PHONY : src/system.i
 
 # target to preprocess a source file
-Optimization/Optimizer.cc.i:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Optimization/Optimizer.cc.i
-.PHONY : Optimization/Optimizer.cc.i
+src/system.cpp.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/system.cpp.i
+.PHONY : src/system.cpp.i
 
-Optimization/Optimizer.s: Optimization/Optimizer.cc.s
+src/system.s: src/system.cpp.s
 
-.PHONY : Optimization/Optimizer.s
+.PHONY : src/system.s
 
 # target to generate assembly for a file
-Optimization/Optimizer.cc.s:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Optimization/Optimizer.cc.s
-.PHONY : Optimization/Optimizer.cc.s
+src/system.cpp.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/system.cpp.s
+.PHONY : src/system.cpp.s
 
-Optimization/Solver.o: Optimization/Solver.cc.o
+src/tracking/build_pyramid.o: src/tracking/build_pyramid.cpp.o
 
-.PHONY : Optimization/Solver.o
+.PHONY : src/tracking/build_pyramid.o
 
 # target to build an object file
-Optimization/Solver.cc.o:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Optimization/Solver.cc.o
-.PHONY : Optimization/Solver.cc.o
+src/tracking/build_pyramid.cpp.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/build_pyramid.cpp.o
+.PHONY : src/tracking/build_pyramid.cpp.o
 
-Optimization/Solver.i: Optimization/Solver.cc.i
+src/tracking/build_pyramid.i: src/tracking/build_pyramid.cpp.i
 
-.PHONY : Optimization/Solver.i
+.PHONY : src/tracking/build_pyramid.i
 
 # target to preprocess a source file
-Optimization/Solver.cc.i:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Optimization/Solver.cc.i
-.PHONY : Optimization/Solver.cc.i
+src/tracking/build_pyramid.cpp.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/build_pyramid.cpp.i
+.PHONY : src/tracking/build_pyramid.cpp.i
 
-Optimization/Solver.s: Optimization/Solver.cc.s
+src/tracking/build_pyramid.s: src/tracking/build_pyramid.cpp.s
 
-.PHONY : Optimization/Solver.s
+.PHONY : src/tracking/build_pyramid.s
 
 # target to generate assembly for a file
-Optimization/Solver.cc.s:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Optimization/Solver.cc.s
-.PHONY : Optimization/Solver.cc.s
+src/tracking/build_pyramid.cpp.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/build_pyramid.cpp.s
+.PHONY : src/tracking/build_pyramid.cpp.s
 
-Tracking/KeyPoints.o: Tracking/KeyPoints.cu.o
+src/tracking/cuda_imgproc.o: src/tracking/cuda_imgproc.cu.o
 
-.PHONY : Tracking/KeyPoints.o
+.PHONY : src/tracking/cuda_imgproc.o
 
 # target to build an object file
-Tracking/KeyPoints.cu.o:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Tracking/KeyPoints.cu.o
-.PHONY : Tracking/KeyPoints.cu.o
+src/tracking/cuda_imgproc.cu.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/cuda_imgproc.cu.o
+.PHONY : src/tracking/cuda_imgproc.cu.o
 
-Tracking/KeyPoints.i: Tracking/KeyPoints.cu.i
+src/tracking/cuda_imgproc.i: src/tracking/cuda_imgproc.cu.i
 
-.PHONY : Tracking/KeyPoints.i
+.PHONY : src/tracking/cuda_imgproc.i
 
 # target to preprocess a source file
-Tracking/KeyPoints.cu.i:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Tracking/KeyPoints.cu.i
-.PHONY : Tracking/KeyPoints.cu.i
+src/tracking/cuda_imgproc.cu.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/cuda_imgproc.cu.i
+.PHONY : src/tracking/cuda_imgproc.cu.i
 
-Tracking/KeyPoints.s: Tracking/KeyPoints.cu.s
+src/tracking/cuda_imgproc.s: src/tracking/cuda_imgproc.cu.s
 
-.PHONY : Tracking/KeyPoints.s
+.PHONY : src/tracking/cuda_imgproc.s
 
 # target to generate assembly for a file
-Tracking/KeyPoints.cu.s:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Tracking/KeyPoints.cu.s
-.PHONY : Tracking/KeyPoints.cu.s
+src/tracking/cuda_imgproc.cu.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/cuda_imgproc.cu.s
+.PHONY : src/tracking/cuda_imgproc.cu.s
 
-Tracking/Pyrdown.o: Tracking/Pyrdown.cu.o
+src/tracking/device_image.o: src/tracking/device_image.cpp.o
 
-.PHONY : Tracking/Pyrdown.o
+.PHONY : src/tracking/device_image.o
 
 # target to build an object file
-Tracking/Pyrdown.cu.o:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Tracking/Pyrdown.cu.o
-.PHONY : Tracking/Pyrdown.cu.o
+src/tracking/device_image.cpp.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/device_image.cpp.o
+.PHONY : src/tracking/device_image.cpp.o
 
-Tracking/Pyrdown.i: Tracking/Pyrdown.cu.i
+src/tracking/device_image.i: src/tracking/device_image.cpp.i
 
-.PHONY : Tracking/Pyrdown.i
+.PHONY : src/tracking/device_image.i
 
 # target to preprocess a source file
-Tracking/Pyrdown.cu.i:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Tracking/Pyrdown.cu.i
-.PHONY : Tracking/Pyrdown.cu.i
+src/tracking/device_image.cpp.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/device_image.cpp.i
+.PHONY : src/tracking/device_image.cpp.i
 
-Tracking/Pyrdown.s: Tracking/Pyrdown.cu.s
+src/tracking/device_image.s: src/tracking/device_image.cpp.s
 
-.PHONY : Tracking/Pyrdown.s
+.PHONY : src/tracking/device_image.s
 
 # target to generate assembly for a file
-Tracking/Pyrdown.cu.s:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Tracking/Pyrdown.cu.s
-.PHONY : Tracking/Pyrdown.cu.s
+src/tracking/device_image.cpp.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/device_image.cpp.s
+.PHONY : src/tracking/device_image.cpp.s
 
-Tracking/Reduction.o: Tracking/Reduction.cu.o
+src/tracking/icp_tracker.o: src/tracking/icp_tracker.cpp.o
 
-.PHONY : Tracking/Reduction.o
+.PHONY : src/tracking/icp_tracker.o
 
 # target to build an object file
-Tracking/Reduction.cu.o:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Tracking/Reduction.cu.o
-.PHONY : Tracking/Reduction.cu.o
+src/tracking/icp_tracker.cpp.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/icp_tracker.cpp.o
+.PHONY : src/tracking/icp_tracker.cpp.o
 
-Tracking/Reduction.i: Tracking/Reduction.cu.i
+src/tracking/icp_tracker.i: src/tracking/icp_tracker.cpp.i
 
-.PHONY : Tracking/Reduction.i
+.PHONY : src/tracking/icp_tracker.i
 
 # target to preprocess a source file
-Tracking/Reduction.cu.i:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Tracking/Reduction.cu.i
-.PHONY : Tracking/Reduction.cu.i
+src/tracking/icp_tracker.cpp.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/icp_tracker.cpp.i
+.PHONY : src/tracking/icp_tracker.cpp.i
 
-Tracking/Reduction.s: Tracking/Reduction.cu.s
+src/tracking/icp_tracker.s: src/tracking/icp_tracker.cpp.s
 
-.PHONY : Tracking/Reduction.s
+.PHONY : src/tracking/icp_tracker.s
 
 # target to generate assembly for a file
-Tracking/Reduction.cu.s:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Tracking/Reduction.cu.s
-.PHONY : Tracking/Reduction.cu.s
+src/tracking/icp_tracker.cpp.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/icp_tracker.cpp.s
+.PHONY : src/tracking/icp_tracker.cpp.s
 
-Tracking/Tracking.o: Tracking/Tracking.cc.o
+src/tracking/m_estimator.o: src/tracking/m_estimator.cu.o
 
-.PHONY : Tracking/Tracking.o
+.PHONY : src/tracking/m_estimator.o
 
 # target to build an object file
-Tracking/Tracking.cc.o:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Tracking/Tracking.cc.o
-.PHONY : Tracking/Tracking.cc.o
+src/tracking/m_estimator.cu.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/m_estimator.cu.o
+.PHONY : src/tracking/m_estimator.cu.o
 
-Tracking/Tracking.i: Tracking/Tracking.cc.i
+src/tracking/m_estimator.i: src/tracking/m_estimator.cu.i
 
-.PHONY : Tracking/Tracking.i
+.PHONY : src/tracking/m_estimator.i
 
 # target to preprocess a source file
-Tracking/Tracking.cc.i:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Tracking/Tracking.cc.i
-.PHONY : Tracking/Tracking.cc.i
+src/tracking/m_estimator.cu.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/m_estimator.cu.i
+.PHONY : src/tracking/m_estimator.cu.i
 
-Tracking/Tracking.s: Tracking/Tracking.cc.s
+src/tracking/m_estimator.s: src/tracking/m_estimator.cu.s
 
-.PHONY : Tracking/Tracking.s
+.PHONY : src/tracking/m_estimator.s
 
 # target to generate assembly for a file
-Tracking/Tracking.cc.s:
-	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/Tracking/Tracking.cc.s
-.PHONY : Tracking/Tracking.cc.s
+src/tracking/m_estimator.cu.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/m_estimator.cu.s
+.PHONY : src/tracking/m_estimator.cu.s
+
+src/tracking/pose_estimator.o: src/tracking/pose_estimator.cu.o
+
+.PHONY : src/tracking/pose_estimator.o
+
+# target to build an object file
+src/tracking/pose_estimator.cu.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/pose_estimator.cu.o
+.PHONY : src/tracking/pose_estimator.cu.o
+
+src/tracking/pose_estimator.i: src/tracking/pose_estimator.cu.i
+
+.PHONY : src/tracking/pose_estimator.i
+
+# target to preprocess a source file
+src/tracking/pose_estimator.cu.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/pose_estimator.cu.i
+.PHONY : src/tracking/pose_estimator.cu.i
+
+src/tracking/pose_estimator.s: src/tracking/pose_estimator.cu.s
+
+.PHONY : src/tracking/pose_estimator.s
+
+# target to generate assembly for a file
+src/tracking/pose_estimator.cu.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/pose_estimator.cu.s
+.PHONY : src/tracking/pose_estimator.cu.s
+
+src/tracking/rgbd_odometry.o: src/tracking/rgbd_odometry.cpp.o
+
+.PHONY : src/tracking/rgbd_odometry.o
+
+# target to build an object file
+src/tracking/rgbd_odometry.cpp.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/rgbd_odometry.cpp.o
+.PHONY : src/tracking/rgbd_odometry.cpp.o
+
+src/tracking/rgbd_odometry.i: src/tracking/rgbd_odometry.cpp.i
+
+.PHONY : src/tracking/rgbd_odometry.i
+
+# target to preprocess a source file
+src/tracking/rgbd_odometry.cpp.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/rgbd_odometry.cpp.i
+.PHONY : src/tracking/rgbd_odometry.cpp.i
+
+src/tracking/rgbd_odometry.s: src/tracking/rgbd_odometry.cpp.s
+
+.PHONY : src/tracking/rgbd_odometry.s
+
+# target to generate assembly for a file
+src/tracking/rgbd_odometry.cpp.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/tracking/rgbd_odometry.cpp.s
+.PHONY : src/tracking/rgbd_odometry.cpp.s
+
+src/visualization/main_window.o: src/visualization/main_window.cpp.o
+
+.PHONY : src/visualization/main_window.o
+
+# target to build an object file
+src/visualization/main_window.cpp.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/visualization/main_window.cpp.o
+.PHONY : src/visualization/main_window.cpp.o
+
+src/visualization/main_window.i: src/visualization/main_window.cpp.i
+
+.PHONY : src/visualization/main_window.i
+
+# target to preprocess a source file
+src/visualization/main_window.cpp.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/visualization/main_window.cpp.i
+.PHONY : src/visualization/main_window.cpp.i
+
+src/visualization/main_window.s: src/visualization/main_window.cpp.s
+
+.PHONY : src/visualization/main_window.s
+
+# target to generate assembly for a file
+src/visualization/main_window.cpp.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/visualization/main_window.cpp.s
+.PHONY : src/visualization/main_window.cpp.s
+
+src/voxel_hashing/depth_fusion.o: src/voxel_hashing/depth_fusion.cu.o
+
+.PHONY : src/voxel_hashing/depth_fusion.o
+
+# target to build an object file
+src/voxel_hashing/depth_fusion.cu.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/voxel_hashing/depth_fusion.cu.o
+.PHONY : src/voxel_hashing/depth_fusion.cu.o
+
+src/voxel_hashing/depth_fusion.i: src/voxel_hashing/depth_fusion.cu.i
+
+.PHONY : src/voxel_hashing/depth_fusion.i
+
+# target to preprocess a source file
+src/voxel_hashing/depth_fusion.cu.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/voxel_hashing/depth_fusion.cu.i
+.PHONY : src/voxel_hashing/depth_fusion.cu.i
+
+src/voxel_hashing/depth_fusion.s: src/voxel_hashing/depth_fusion.cu.s
+
+.PHONY : src/voxel_hashing/depth_fusion.s
+
+# target to generate assembly for a file
+src/voxel_hashing/depth_fusion.cu.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/voxel_hashing/depth_fusion.cu.s
+.PHONY : src/voxel_hashing/depth_fusion.cu.s
+
+src/voxel_hashing/ray_tracing.o: src/voxel_hashing/ray_tracing.cu.o
+
+.PHONY : src/voxel_hashing/ray_tracing.o
+
+# target to build an object file
+src/voxel_hashing/ray_tracing.cu.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/voxel_hashing/ray_tracing.cu.o
+.PHONY : src/voxel_hashing/ray_tracing.cu.o
+
+src/voxel_hashing/ray_tracing.i: src/voxel_hashing/ray_tracing.cu.i
+
+.PHONY : src/voxel_hashing/ray_tracing.i
+
+# target to preprocess a source file
+src/voxel_hashing/ray_tracing.cu.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/voxel_hashing/ray_tracing.cu.i
+.PHONY : src/voxel_hashing/ray_tracing.cu.i
+
+src/voxel_hashing/ray_tracing.s: src/voxel_hashing/ray_tracing.cu.s
+
+.PHONY : src/voxel_hashing/ray_tracing.s
+
+# target to generate assembly for a file
+src/voxel_hashing/ray_tracing.cu.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/voxel_hashing/ray_tracing.cu.s
+.PHONY : src/voxel_hashing/ray_tracing.cu.s
+
+src/voxel_hashing/scene_mesh.o: src/voxel_hashing/scene_mesh.cu.o
+
+.PHONY : src/voxel_hashing/scene_mesh.o
+
+# target to build an object file
+src/voxel_hashing/scene_mesh.cu.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/voxel_hashing/scene_mesh.cu.o
+.PHONY : src/voxel_hashing/scene_mesh.cu.o
+
+src/voxel_hashing/scene_mesh.i: src/voxel_hashing/scene_mesh.cu.i
+
+.PHONY : src/voxel_hashing/scene_mesh.i
+
+# target to preprocess a source file
+src/voxel_hashing/scene_mesh.cu.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/voxel_hashing/scene_mesh.cu.i
+.PHONY : src/voxel_hashing/scene_mesh.cu.i
+
+src/voxel_hashing/scene_mesh.s: src/voxel_hashing/scene_mesh.cu.s
+
+.PHONY : src/voxel_hashing/scene_mesh.s
+
+# target to generate assembly for a file
+src/voxel_hashing/scene_mesh.cu.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/voxel_hashing/scene_mesh.cu.s
+.PHONY : src/voxel_hashing/scene_mesh.cu.s
+
+src/voxel_hashing/voxel_hashing.o: src/voxel_hashing/voxel_hashing.cpp.o
+
+.PHONY : src/voxel_hashing/voxel_hashing.o
+
+# target to build an object file
+src/voxel_hashing/voxel_hashing.cpp.o:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/voxel_hashing/voxel_hashing.cpp.o
+.PHONY : src/voxel_hashing/voxel_hashing.cpp.o
+
+src/voxel_hashing/voxel_hashing.i: src/voxel_hashing/voxel_hashing.cpp.i
+
+.PHONY : src/voxel_hashing/voxel_hashing.i
+
+# target to preprocess a source file
+src/voxel_hashing/voxel_hashing.cpp.i:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/voxel_hashing/voxel_hashing.cpp.i
+.PHONY : src/voxel_hashing/voxel_hashing.cpp.i
+
+src/voxel_hashing/voxel_hashing.s: src/voxel_hashing/voxel_hashing.cpp.s
+
+.PHONY : src/voxel_hashing/voxel_hashing.s
+
+# target to generate assembly for a file
+src/voxel_hashing/voxel_hashing.cpp.s:
+	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/src/voxel_hashing/voxel_hashing.cpp.s
+.PHONY : src/voxel_hashing/voxel_hashing.cpp.s
 
 # Help Target
 help:
@@ -669,67 +843,85 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... phong.vert"
+	@echo "... direct_output.frag"
 	@echo "... edit_cache"
-	@echo "... test_output_cam"
-	@echo "... semantic_icp_slam"
-	@echo "... test_output_tum"
-	@echo "... Core/Camera.o"
-	@echo "... Core/Camera.i"
-	@echo "... Core/Camera.s"
-	@echo "... Core/Frame.o"
-	@echo "... Core/Frame.i"
-	@echo "... Core/Frame.s"
-	@echo "... Core/KeyFrame.o"
-	@echo "... Core/KeyFrame.i"
-	@echo "... Core/KeyFrame.s"
-	@echo "... Core/System.o"
-	@echo "... Core/System.i"
-	@echo "... Core/System.s"
-	@echo "... Detecting/MaskRCNN.o"
-	@echo "... Detecting/MaskRCNN.i"
-	@echo "... Detecting/MaskRCNN.s"
-	@echo "... GUI/Viewer.o"
-	@echo "... GUI/Viewer.i"
-	@echo "... GUI/Viewer.s"
-	@echo "... Main.o"
-	@echo "... Main.i"
-	@echo "... Main.s"
-	@echo "... MainTum.o"
-	@echo "... MainTum.i"
-	@echo "... MainTum.s"
-	@echo "... Mapping/DeviceMap.o"
-	@echo "... Mapping/DeviceMap.i"
-	@echo "... Mapping/DeviceMap.s"
-	@echo "... Mapping/FuseMap.o"
-	@echo "... Mapping/FuseMap.i"
-	@echo "... Mapping/FuseMap.s"
-	@echo "... Mapping/Mapping.o"
-	@echo "... Mapping/Mapping.i"
-	@echo "... Mapping/Mapping.s"
-	@echo "... Mapping/MeshScene.o"
-	@echo "... Mapping/MeshScene.i"
-	@echo "... Mapping/MeshScene.s"
-	@echo "... Mapping/RenderScene.o"
-	@echo "... Mapping/RenderScene.i"
-	@echo "... Mapping/RenderScene.s"
-	@echo "... Optimization/Optimizer.o"
-	@echo "... Optimization/Optimizer.i"
-	@echo "... Optimization/Optimizer.s"
-	@echo "... Optimization/Solver.o"
-	@echo "... Optimization/Solver.i"
-	@echo "... Optimization/Solver.s"
-	@echo "... Tracking/KeyPoints.o"
-	@echo "... Tracking/KeyPoints.i"
-	@echo "... Tracking/KeyPoints.s"
-	@echo "... Tracking/Pyrdown.o"
-	@echo "... Tracking/Pyrdown.i"
-	@echo "... Tracking/Pyrdown.s"
-	@echo "... Tracking/Reduction.o"
-	@echo "... Tracking/Reduction.i"
-	@echo "... Tracking/Reduction.s"
-	@echo "... Tracking/Tracking.o"
-	@echo "... Tracking/Tracking.i"
-	@echo "... Tracking/Tracking.s"
+	@echo "... fusion"
+	@echo "... colour.vert"
+	@echo "... openni"
+	@echo "... tum"
+	@echo "... src/data_struct/map_struct.o"
+	@echo "... src/data_struct/map_struct.i"
+	@echo "... src/data_struct/map_struct.s"
+	@echo "... src/data_struct/rgbd_frame.o"
+	@echo "... src/data_struct/rgbd_frame.i"
+	@echo "... src/data_struct/rgbd_frame.s"
+	@echo "... src/detection/MaskRCNN.o"
+	@echo "... src/detection/MaskRCNN.i"
+	@echo "... src/detection/MaskRCNN.s"
+	@echo "... src/features/extractor.o"
+	@echo "... src/features/extractor.i"
+	@echo "... src/features/extractor.s"
+	@echo "... src/features/matcher.o"
+	@echo "... src/features/matcher.i"
+	@echo "... src/features/matcher.s"
+	@echo "... src/input/oni_camera.o"
+	@echo "... src/input/oni_camera.i"
+	@echo "... src/input/oni_camera.s"
+	@echo "... src/input/tum_loader.o"
+	@echo "... src/input/tum_loader.i"
+	@echo "... src/input/tum_loader.s"
+	@echo "... src/keyframe_graph/keyframe_graph.o"
+	@echo "... src/keyframe_graph/keyframe_graph.i"
+	@echo "... src/keyframe_graph/keyframe_graph.s"
+	@echo "... src/map_manager.o"
+	@echo "... src/map_manager.i"
+	@echo "... src/map_manager.s"
+	@echo "... src/relocalization/ransac_ao.o"
+	@echo "... src/relocalization/ransac_ao.i"
+	@echo "... src/relocalization/ransac_ao.s"
+	@echo "... src/relocalization/relocalizer.o"
+	@echo "... src/relocalization/relocalizer.i"
+	@echo "... src/relocalization/relocalizer.s"
+	@echo "... src/system.o"
+	@echo "... src/system.i"
+	@echo "... src/system.s"
+	@echo "... src/tracking/build_pyramid.o"
+	@echo "... src/tracking/build_pyramid.i"
+	@echo "... src/tracking/build_pyramid.s"
+	@echo "... src/tracking/cuda_imgproc.o"
+	@echo "... src/tracking/cuda_imgproc.i"
+	@echo "... src/tracking/cuda_imgproc.s"
+	@echo "... src/tracking/device_image.o"
+	@echo "... src/tracking/device_image.i"
+	@echo "... src/tracking/device_image.s"
+	@echo "... src/tracking/icp_tracker.o"
+	@echo "... src/tracking/icp_tracker.i"
+	@echo "... src/tracking/icp_tracker.s"
+	@echo "... src/tracking/m_estimator.o"
+	@echo "... src/tracking/m_estimator.i"
+	@echo "... src/tracking/m_estimator.s"
+	@echo "... src/tracking/pose_estimator.o"
+	@echo "... src/tracking/pose_estimator.i"
+	@echo "... src/tracking/pose_estimator.s"
+	@echo "... src/tracking/rgbd_odometry.o"
+	@echo "... src/tracking/rgbd_odometry.i"
+	@echo "... src/tracking/rgbd_odometry.s"
+	@echo "... src/visualization/main_window.o"
+	@echo "... src/visualization/main_window.i"
+	@echo "... src/visualization/main_window.s"
+	@echo "... src/voxel_hashing/depth_fusion.o"
+	@echo "... src/voxel_hashing/depth_fusion.i"
+	@echo "... src/voxel_hashing/depth_fusion.s"
+	@echo "... src/voxel_hashing/ray_tracing.o"
+	@echo "... src/voxel_hashing/ray_tracing.i"
+	@echo "... src/voxel_hashing/ray_tracing.s"
+	@echo "... src/voxel_hashing/scene_mesh.o"
+	@echo "... src/voxel_hashing/scene_mesh.i"
+	@echo "... src/voxel_hashing/scene_mesh.s"
+	@echo "... src/voxel_hashing/voxel_hashing.o"
+	@echo "... src/voxel_hashing/voxel_hashing.i"
+	@echo "... src/voxel_hashing/voxel_hashing.s"
 .PHONY : help
 
 
