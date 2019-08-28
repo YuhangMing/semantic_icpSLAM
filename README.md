@@ -1,14 +1,5 @@
-Dense Reconstructon System
-========================================
+This VERSION:
 
-## 1. DEPENDENCIES
+2019-05-28 version of icp_slam with semantic analysis on.
 
-- [OpenCV 3.4.*](https://opencv.org/), tested on 3.4.5
-- [CUDA](https://developer.nvidia.com/cuda-zone), tested on 10.1
-- [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page), tested on 3.3.4
-- [Pangolin](https://github.com/stevenlovegrove/Pangolin)
-- [Sophus](https://github.com/strasdat/Sophus)
-- (Optional) [OpenNI2](https://structure.io/openni)
-
-## 2. REPO USAGE
-
+2019-06-06 version of maskrcnn

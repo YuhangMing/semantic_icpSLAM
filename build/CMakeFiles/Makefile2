@@ -59,287 +59,119 @@ RM = /opt/cmake-3.14.0-rc2-Linux-x86_64/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lk18493/SLAM_work/libfusion
+CMAKE_SOURCE_DIR = /home/lk18493/SLAM_work/semantic_icpSLAM
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lk18493/SLAM_work/libfusion/build
+CMAKE_BINARY_DIR = /home/lk18493/SLAM_work/semantic_icpSLAM/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/phong.vert.dir
+# Target rules for target CMakeFiles/test_output_cam.dir
 
 # All Build rule for target.
-CMakeFiles/phong.vert.dir/all:
-	$(MAKE) -f CMakeFiles/phong.vert.dir/build.make CMakeFiles/phong.vert.dir/depend
-	$(MAKE) -f CMakeFiles/phong.vert.dir/build.make CMakeFiles/phong.vert.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lk18493/SLAM_work/libfusion/build/CMakeFiles --progress-num=31 "Built target phong.vert"
-.PHONY : CMakeFiles/phong.vert.dir/all
+CMakeFiles/test_output_cam.dir/all: CMakeFiles/semantic_icp_slam.dir/all
+	$(MAKE) -f CMakeFiles/test_output_cam.dir/build.make CMakeFiles/test_output_cam.dir/depend
+	$(MAKE) -f CMakeFiles/test_output_cam.dir/build.make CMakeFiles/test_output_cam.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lk18493/SLAM_work/semantic_icpSLAM/build/CMakeFiles --progress-num=20,21 "Built target test_output_cam"
+.PHONY : CMakeFiles/test_output_cam.dir/all
 
 # Include target in all.
-all: CMakeFiles/phong.vert.dir/all
+all: CMakeFiles/test_output_cam.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/phong.vert.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/libfusion/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/phong.vert.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/libfusion/build/CMakeFiles 0
-.PHONY : CMakeFiles/phong.vert.dir/rule
+CMakeFiles/test_output_cam.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/semantic_icpSLAM/build/CMakeFiles 21
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_output_cam.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/semantic_icpSLAM/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_output_cam.dir/rule
 
 # Convenience name for target.
-phong.vert: CMakeFiles/phong.vert.dir/rule
+test_output_cam: CMakeFiles/test_output_cam.dir/rule
 
-.PHONY : phong.vert
-
-# clean rule for target.
-CMakeFiles/phong.vert.dir/clean:
-	$(MAKE) -f CMakeFiles/phong.vert.dir/build.make CMakeFiles/phong.vert.dir/clean
-.PHONY : CMakeFiles/phong.vert.dir/clean
+.PHONY : test_output_cam
 
 # clean rule for target.
-clean: CMakeFiles/phong.vert.dir/clean
+CMakeFiles/test_output_cam.dir/clean:
+	$(MAKE) -f CMakeFiles/test_output_cam.dir/build.make CMakeFiles/test_output_cam.dir/clean
+.PHONY : CMakeFiles/test_output_cam.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/test_output_cam.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/direct_output.frag.dir
+# Target rules for target CMakeFiles/semantic_icp_slam.dir
 
 # All Build rule for target.
-CMakeFiles/direct_output.frag.dir/all:
-	$(MAKE) -f CMakeFiles/direct_output.frag.dir/build.make CMakeFiles/direct_output.frag.dir/depend
-	$(MAKE) -f CMakeFiles/direct_output.frag.dir/build.make CMakeFiles/direct_output.frag.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lk18493/SLAM_work/libfusion/build/CMakeFiles --progress-num=2 "Built target direct_output.frag"
-.PHONY : CMakeFiles/direct_output.frag.dir/all
+CMakeFiles/semantic_icp_slam.dir/all:
+	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/depend
+	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lk18493/SLAM_work/semantic_icpSLAM/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19 "Built target semantic_icp_slam"
+.PHONY : CMakeFiles/semantic_icp_slam.dir/all
 
 # Include target in all.
-all: CMakeFiles/direct_output.frag.dir/all
+all: CMakeFiles/semantic_icp_slam.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/direct_output.frag.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/libfusion/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/direct_output.frag.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/libfusion/build/CMakeFiles 0
-.PHONY : CMakeFiles/direct_output.frag.dir/rule
+CMakeFiles/semantic_icp_slam.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/semantic_icpSLAM/build/CMakeFiles 19
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/semantic_icp_slam.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/semantic_icpSLAM/build/CMakeFiles 0
+.PHONY : CMakeFiles/semantic_icp_slam.dir/rule
 
 # Convenience name for target.
-direct_output.frag: CMakeFiles/direct_output.frag.dir/rule
+semantic_icp_slam: CMakeFiles/semantic_icp_slam.dir/rule
 
-.PHONY : direct_output.frag
-
-# clean rule for target.
-CMakeFiles/direct_output.frag.dir/clean:
-	$(MAKE) -f CMakeFiles/direct_output.frag.dir/build.make CMakeFiles/direct_output.frag.dir/clean
-.PHONY : CMakeFiles/direct_output.frag.dir/clean
+.PHONY : semantic_icp_slam
 
 # clean rule for target.
-clean: CMakeFiles/direct_output.frag.dir/clean
+CMakeFiles/semantic_icp_slam.dir/clean:
+	$(MAKE) -f CMakeFiles/semantic_icp_slam.dir/build.make CMakeFiles/semantic_icp_slam.dir/clean
+.PHONY : CMakeFiles/semantic_icp_slam.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/semantic_icp_slam.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/fusion.dir
+# Target rules for target CMakeFiles/test_output_tum.dir
 
 # All Build rule for target.
-CMakeFiles/fusion.dir/all:
-	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/depend
-	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lk18493/SLAM_work/libfusion/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28 "Built target fusion"
-.PHONY : CMakeFiles/fusion.dir/all
+CMakeFiles/test_output_tum.dir/all: CMakeFiles/semantic_icp_slam.dir/all
+	$(MAKE) -f CMakeFiles/test_output_tum.dir/build.make CMakeFiles/test_output_tum.dir/depend
+	$(MAKE) -f CMakeFiles/test_output_tum.dir/build.make CMakeFiles/test_output_tum.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lk18493/SLAM_work/semantic_icpSLAM/build/CMakeFiles --progress-num=22,23 "Built target test_output_tum"
+.PHONY : CMakeFiles/test_output_tum.dir/all
 
 # Include target in all.
-all: CMakeFiles/fusion.dir/all
+all: CMakeFiles/test_output_tum.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/fusion.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/libfusion/build/CMakeFiles 26
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/fusion.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/libfusion/build/CMakeFiles 0
-.PHONY : CMakeFiles/fusion.dir/rule
+CMakeFiles/test_output_tum.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/semantic_icpSLAM/build/CMakeFiles 21
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_output_tum.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/semantic_icpSLAM/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_output_tum.dir/rule
 
 # Convenience name for target.
-fusion: CMakeFiles/fusion.dir/rule
+test_output_tum: CMakeFiles/test_output_tum.dir/rule
 
-.PHONY : fusion
-
-# clean rule for target.
-CMakeFiles/fusion.dir/clean:
-	$(MAKE) -f CMakeFiles/fusion.dir/build.make CMakeFiles/fusion.dir/clean
-.PHONY : CMakeFiles/fusion.dir/clean
+.PHONY : test_output_tum
 
 # clean rule for target.
-clean: CMakeFiles/fusion.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/colour.vert.dir
-
-# All Build rule for target.
-CMakeFiles/colour.vert.dir/all:
-	$(MAKE) -f CMakeFiles/colour.vert.dir/build.make CMakeFiles/colour.vert.dir/depend
-	$(MAKE) -f CMakeFiles/colour.vert.dir/build.make CMakeFiles/colour.vert.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lk18493/SLAM_work/libfusion/build/CMakeFiles --progress-num=1 "Built target colour.vert"
-.PHONY : CMakeFiles/colour.vert.dir/all
-
-# Include target in all.
-all: CMakeFiles/colour.vert.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/colour.vert.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/libfusion/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/colour.vert.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/libfusion/build/CMakeFiles 0
-.PHONY : CMakeFiles/colour.vert.dir/rule
-
-# Convenience name for target.
-colour.vert: CMakeFiles/colour.vert.dir/rule
-
-.PHONY : colour.vert
+CMakeFiles/test_output_tum.dir/clean:
+	$(MAKE) -f CMakeFiles/test_output_tum.dir/build.make CMakeFiles/test_output_tum.dir/clean
+.PHONY : CMakeFiles/test_output_tum.dir/clean
 
 # clean rule for target.
-CMakeFiles/colour.vert.dir/clean:
-	$(MAKE) -f CMakeFiles/colour.vert.dir/build.make CMakeFiles/colour.vert.dir/clean
-.PHONY : CMakeFiles/colour.vert.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/colour.vert.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory example
-
-# Convenience name for "all" pass in the directory.
-example/all: example/open_ni/all
-example/all: example/tum/all
-
-.PHONY : example/all
-
-# Convenience name for "clean" pass in the directory.
-example/clean: example/open_ni/clean
-example/clean: example/tum/clean
-
-.PHONY : example/clean
-
-# Convenience name for "preinstall" pass in the directory.
-example/preinstall: example/open_ni/preinstall
-example/preinstall: example/tum/preinstall
-
-.PHONY : example/preinstall
-
-#=============================================================================
-# Directory level rules for directory example/open_ni
-
-# Convenience name for "all" pass in the directory.
-example/open_ni/all: example/open_ni/CMakeFiles/openni.dir/all
-
-.PHONY : example/open_ni/all
-
-# Convenience name for "clean" pass in the directory.
-example/open_ni/clean: example/open_ni/CMakeFiles/openni.dir/clean
-
-.PHONY : example/open_ni/clean
-
-# Convenience name for "preinstall" pass in the directory.
-example/open_ni/preinstall:
-
-.PHONY : example/open_ni/preinstall
-
-#=============================================================================
-# Target rules for target example/open_ni/CMakeFiles/openni.dir
-
-# All Build rule for target.
-example/open_ni/CMakeFiles/openni.dir/all: CMakeFiles/fusion.dir/all
-	$(MAKE) -f example/open_ni/CMakeFiles/openni.dir/build.make example/open_ni/CMakeFiles/openni.dir/depend
-	$(MAKE) -f example/open_ni/CMakeFiles/openni.dir/build.make example/open_ni/CMakeFiles/openni.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lk18493/SLAM_work/libfusion/build/CMakeFiles --progress-num=29,30 "Built target openni"
-.PHONY : example/open_ni/CMakeFiles/openni.dir/all
-
-# Include target in all.
-all: example/open_ni/CMakeFiles/openni.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-example/open_ni/CMakeFiles/openni.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/libfusion/build/CMakeFiles 28
-	$(MAKE) -f CMakeFiles/Makefile2 example/open_ni/CMakeFiles/openni.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/libfusion/build/CMakeFiles 0
-.PHONY : example/open_ni/CMakeFiles/openni.dir/rule
-
-# Convenience name for target.
-openni: example/open_ni/CMakeFiles/openni.dir/rule
-
-.PHONY : openni
-
-# clean rule for target.
-example/open_ni/CMakeFiles/openni.dir/clean:
-	$(MAKE) -f example/open_ni/CMakeFiles/openni.dir/build.make example/open_ni/CMakeFiles/openni.dir/clean
-.PHONY : example/open_ni/CMakeFiles/openni.dir/clean
-
-# clean rule for target.
-clean: example/open_ni/CMakeFiles/openni.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory example/tum
-
-# Convenience name for "all" pass in the directory.
-example/tum/all: example/tum/CMakeFiles/tum.dir/all
-
-.PHONY : example/tum/all
-
-# Convenience name for "clean" pass in the directory.
-example/tum/clean: example/tum/CMakeFiles/tum.dir/clean
-
-.PHONY : example/tum/clean
-
-# Convenience name for "preinstall" pass in the directory.
-example/tum/preinstall:
-
-.PHONY : example/tum/preinstall
-
-#=============================================================================
-# Target rules for target example/tum/CMakeFiles/tum.dir
-
-# All Build rule for target.
-example/tum/CMakeFiles/tum.dir/all: CMakeFiles/fusion.dir/all
-	$(MAKE) -f example/tum/CMakeFiles/tum.dir/build.make example/tum/CMakeFiles/tum.dir/depend
-	$(MAKE) -f example/tum/CMakeFiles/tum.dir/build.make example/tum/CMakeFiles/tum.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lk18493/SLAM_work/libfusion/build/CMakeFiles --progress-num=32,33 "Built target tum"
-.PHONY : example/tum/CMakeFiles/tum.dir/all
-
-# Include target in all.
-all: example/tum/CMakeFiles/tum.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-example/tum/CMakeFiles/tum.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/libfusion/build/CMakeFiles 28
-	$(MAKE) -f CMakeFiles/Makefile2 example/tum/CMakeFiles/tum.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lk18493/SLAM_work/libfusion/build/CMakeFiles 0
-.PHONY : example/tum/CMakeFiles/tum.dir/rule
-
-# Convenience name for target.
-tum: example/tum/CMakeFiles/tum.dir/rule
-
-.PHONY : tum
-
-# clean rule for target.
-example/tum/CMakeFiles/tum.dir/clean:
-	$(MAKE) -f example/tum/CMakeFiles/tum.dir/build.make example/tum/CMakeFiles/tum.dir/clean
-.PHONY : example/tum/CMakeFiles/tum.dir/clean
-
-# clean rule for target.
-clean: example/tum/CMakeFiles/tum.dir/clean
+clean: CMakeFiles/test_output_tum.dir/clean
 
 .PHONY : clean
 

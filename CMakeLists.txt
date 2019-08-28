@@ -1,97 +1,98 @@
-cmake_minimum_required(VERSION 2.8)
-project(fusion LANGUAGES CXX CUDA)
+cmake_minimum_required(VERSION 3.11)
+project(semantic_icp_slam CUDA CXX)
 
-# defaults build to release mode
-if(NOT CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE Release)
-  message("-- Build type: " ${CMAKE_BUILD_TYPE})
-endif()
-
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
 set(CMAKE_DISABLE_SOURCE_CHANGES  ON)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/build/bin)
+# set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE Release)
+message("Build type: " ${CMAKE_BUILD_TYPE})
 
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-add_library(fusion SHARED "")
-
+# find dependencies
+find_package(CUDA 9.2 REQUIRED)
+find_package(Eigen3 3.2 REQUIRED)
 find_package(OpenCV 3.4 REQUIRED)
-find_package(Eigen3 3.3 REQUIRED)
+find_package(OpenGL 2.0 REQUIRED)
 find_package(Pangolin REQUIRED)
-include(cmake/FindOpenNI2.cmake)
+find_package(g2o REQUIRED)
+message(WARNING ${OpenCV_INCLUDE_DIRS})
+# set python to the one installed in the virtual environment
+set(PYTHON_LIBRARY /home/lk18493/anaconda3/envs/maskrcnn_benchmark/lib/)
+set(PYTHON_INCLUDE_DIR /home/lk18493/anaconda3/envs/maskrcnn_benchmark/include/python3.7m/)
+find_package(PythonLibs 3.7 REQUIRED)
+message(WARNING ${PYTHON_INCLUDE_DIRS})
 
-find_package(Python3 COMPONENTS Development)
-message("-- Python Dir: " ${Python3_INCLUDE_DIRS})
-message("-- Python Lib: " ${Python3_LIBRARIES})
-# message("-- OpenCV Lib: " ${OpenCV_LIBRARIES})
+message(WARNING ${OpenCV_LIBRARIES})
+message(WARNING ${PYTHON_LIBRARIES})
 
-target_include_directories(fusion
-PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/include
-    ${CUDA_INCLUDE_DIRS}
-    ${Python3_INCLUDE_DIRS}
+include_directories(
+${CMAKE_CURRENT_SOURCE_DIR}/Core
+${CMAKE_CURRENT_SOURCE_DIR}/Detecting
+${CMAKE_CURRENT_SOURCE_DIR}/GUI
+${CMAKE_CURRENT_SOURCE_DIR}/Mapping
+${CMAKE_CURRENT_SOURCE_DIR}/Optimization
+${CMAKE_CURRENT_SOURCE_DIR}/Tracking
+${CMAKE_CURRENT_SOURCE_DIR}/Utility
+${CUDA_INCLUDE_DIRS}
+# ${OpenCV_INCLUDE_DIRS}
+/usr/local/include/opencv2/
+/usr/include/openni2
+/usr/include/suitesparse
+${PYTHON_INCLUDE_DIRS}
+# /home/lk18493/anaconda3/envs/maskrcnn_benchmark/lib/python3.7/site-packages/numpy/core/include/
 )
 
-target_compile_features(fusion
-PUBLIC
-    cxx_std_11
+add_library(${PROJECT_NAME} SHARED
+GUI/Viewer.cc
+
+Mapping/DeviceMap.cu
+Mapping/FuseMap.cu
+Mapping/Mapping.cc
+Mapping/MeshScene.cu
+Mapping/RenderScene.cu
+
+Core/Frame.cc
+Core/Camera.cc
+Core/KeyFrame.cc
+Core/System.cc
+
+Optimization/Optimizer.cc
+Optimization/Solver.cc
+
+Tracking/KeyPoints.cu
+Tracking/Pyrdown.cu
+Tracking/Reduction.cu
+Tracking/Tracking.cc
+
+Detecting/MaskRCNN.cpp
 )
 
-set_target_properties(fusion
-PROPERTIES 
-    CUDA_SEPARABLE_COMPILATION ON
-    POSITION_INDEPENDENT_CODE ON
-    CUDA_STANDARD 11
+target_link_libraries(${PROJECT_NAME}
+Eigen3::Eigen
+${OpenCV_LIBRARIES}
+${OpenGL_LIBRARIES}
+${CUDA_LIBRARIES}
+${Pangolin_LIBRARIES}
+g2o_core
+g2o_stuff
+g2o_types_sba
+g2o_solver_dense
+g2o_solver_cholmod
+${PYTHON_LIBRARIES}/libpython3.7m.so.1.0
 )
 
-target_link_libraries(fusion
-PUBLIC
-    Eigen3::Eigen
-    ${OpenCV_LIBRARIES}
-    ${CUDA_LIBRARIES}
-    ${Pangolin_LIBRARIES}
-    ${Python3_LIBRARIES}
-)
 
-target_sources(fusion
-PRIVATE
-    src/system.cpp
-    src/map_manager.cpp
-    
-    src/data_struct/rgbd_frame.cpp
-    src/data_struct/map_struct.cu
+set_property(TARGET ${PROJECT_NAME} PROPERTY CUDA_STANDARD 11)
+set_property(TARGET ${PROJECT_NAME} PROPERTY CUDA_SEPARABLE_COMPILATION ON)
 
-    src/tracking/icp_tracker.cpp
-    src/tracking/rgbd_odometry.cpp
-    src/tracking/device_image.cpp
-    src/tracking/cuda_imgproc.cu
-    src/tracking/m_estimator.cu
-    src/tracking/pose_estimator.cu
-    src/tracking/build_pyramid.cpp
+# build examples
+add_executable(test_output_tum MainTum.cc)
+target_link_libraries(test_output_tum ${PROJECT_NAME})
 
-    src/features/matcher.cpp
-    src/features/extractor.cpp
-
-    src/keyframe_graph/keyframe_graph.cpp
-
-    src/relocalization/ransac_ao.cpp
-    src/relocalization/relocalizer.cpp
-
-    src/visualization/main_window.cpp
-
-    src/voxel_hashing/voxel_hashing.cpp
-    src/voxel_hashing/depth_fusion.cu
-    src/voxel_hashing/ray_tracing.cu
-    src/voxel_hashing/scene_mesh.cu
-
-    src/input/tum_loader.cpp
-    # src/input/oni_camera.cpp
-
-    src/detection/MaskRCNN.cpp
-
-
-)
-
-add_subdirectory(example)
-include(cmake/InstallGLSL.cmake)
+add_executable(test_output_cam Main.cc)
+target_link_libraries(test_output_cam ${PROJECT_NAME})
