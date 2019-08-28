@@ -389,10 +389,10 @@ float Mapping::CheckVisPercent(){
 	float visible_percent = float(visible[0]) / float(DeviceMap::NumSdfBlocks - remain_relu);
 
 	// output pose of submap, frame_relative, frame_global to file
-	std::ofstream poseFile;
-	poseFile.open ("visible_percent.txt", std::ios::app);
-	poseFile << visible_percent << ": " << float(visible[0]) << "; " << DeviceMap::NumSdfBlocks << " - " << remain_relu << " = " << float(DeviceMap::NumSdfBlocks - remain_relu) << ":\n";
-	poseFile.close();
+	// std::ofstream poseFile;
+	// poseFile.open ("visible_percent.txt", std::ios::app);
+	// poseFile << visible_percent << ": " << float(visible[0]) << "; " << DeviceMap::NumSdfBlocks << " - " << remain_relu << " = " << float(DeviceMap::NumSdfBlocks - remain_relu) << ":\n";
+	// poseFile.close();
 
 	delete [] remain;
 	delete [] visible;
