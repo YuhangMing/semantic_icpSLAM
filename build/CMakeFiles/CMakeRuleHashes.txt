@@ -1,0 +1,7 @@
+# Hashes of file build rules.
+ddecb338f73cea20d40d39855df6e083 CMakeFiles/colour.vert
+ddecb338f73cea20d40d39855df6e083 CMakeFiles/direct_output.frag
+ddecb338f73cea20d40d39855df6e083 CMakeFiles/phong.vert
+e1bfe95d87fb1f48b936f2f59c86089b glsl_shader/colour.vert
+0c55383ed3f62f892b56049c377f527c glsl_shader/direct_output.frag
+dd274cd5d6a69fef994bcba16d855d47 glsl_shader/phong.vert
